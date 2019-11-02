@@ -2,7 +2,7 @@ require "pry"
 require_relative 'artist'
 class Song
     # attr_reader :song_name
-    attr_accessor :artist, :song_name, :name
+    attr_accessor :artist, :name # We need artist here in order for Artist to read/write to this attribute
     @@all = []
     def initialize(name)
         @name=name
@@ -21,10 +21,15 @@ class Song
     @name
    end
 
+
+
    def artist_name
-    self.artist
-    # binding.pry
-   end
+    if self.artist
+        self.artist.name
+      else
+        nil
+      end
+    end
 
 
 end
