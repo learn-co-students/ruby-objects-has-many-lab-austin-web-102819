@@ -1,0 +1,8 @@
+Questions:
+* How does adding the :artist attribute to the Song class allow the Artist to access Song data?
+        * I assume the :artist attribute creates both #artist=(write) and #artist(read) methods. When we call song.artist = self (line 22, artist.rb), 
+        "song" is the song object and "artist" is calling the #artist method to read and write the label into the 
+        song object. Since we're calling it on an artist object, the self applies to the artist object.
+* song.artist =self means:
+    * Take this song object
+    * set the artist attribute equal to the current Artist object. 

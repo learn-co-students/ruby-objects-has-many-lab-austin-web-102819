@@ -6,7 +6,7 @@ class Author
     end
 
     def posts
-        @posts
+        Post.all.select {|post| post.author = self}
     end
 
     def add_post(post) # Setting the post object's artist attribute equal to whatever Author object was called on. 

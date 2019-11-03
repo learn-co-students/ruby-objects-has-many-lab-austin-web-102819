@@ -26,7 +26,8 @@ class Artist
 
 
     def songs
-        @songs
+        
+        Song.all.select {|s| s.artist = self} # Call the class method @@all. Iterate over each item in @@all and return any element who's artist attribute is self.
         #  binding.pry
     end
 
